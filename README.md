@@ -4,3 +4,5 @@
 
 
 #bubble+sort
+#merge+sort
+#insertion+sort
