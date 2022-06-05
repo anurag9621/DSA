@@ -1,0 +1,1 @@
+arr[k] = temp[x];
