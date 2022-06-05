@@ -20,13 +20,16 @@ int main()
         }
         while (arr[j] >= 0)
         {
-            j++;
+            j--;
         }
         if (i < j)
         {
             swap(arr[i], arr[j]);
         }
     }
-
+    for (int i = 0; i < n; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
     return 0;
 }
