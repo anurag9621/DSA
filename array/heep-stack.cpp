@@ -13,12 +13,12 @@ int main()
     p[4] = 7;
     for (int i = 0; i < 5; i++)
     {
-        cout << a[i]<<" ";
+        cout << a[i] << " ";
     }
-    cout<<endl;
+    cout << endl;
     for (int i = 0; i < 5; i++)
     {
-        cout << p[i] <<" ";
+        cout << p[i] << " ";
     }
-    delete []p;
+    delete[] p;
 }

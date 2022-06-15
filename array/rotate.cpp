@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
 void leftRotateByD(int *arr, int n, int d)
 {
 
@@ -11,14 +10,12 @@ void leftRotateByD(int *arr, int n, int d)
         temp[i] = arr[i];
     }
 
-
     int x = 0;
     for (int j = d; j < n; j++)
     {
         arr[x] = arr[j];
         x++;
     }
-
 
     x = 0;
     for (int k = n - d; k < n; k++)

@@ -17,7 +17,6 @@ int main()
     C[1] = new int[4];
     C[2] = new int[4];
 
-
     int i, j;
     for (i = 0; i < 3; i++)
     {

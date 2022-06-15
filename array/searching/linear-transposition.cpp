@@ -9,8 +9,8 @@ int main()
     {
         if (k == a[i])
         {
-            swap(a[i], a[i-1]);
-            return i-1;
+            swap(a[i], a[i - 1]);
+            return i - 1;
         }
     }
     return -1;
