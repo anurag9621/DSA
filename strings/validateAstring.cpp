@@ -3,6 +3,6 @@ using namespace std;
 
 int main()
 {
-    char 
+    char *name="Anurag321";
     return 0;
 }
