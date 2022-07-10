@@ -15,7 +15,7 @@ int main()
     {
         if (H[i] > 1)
         {
-            cout << H[i] << " ";
+            cout << i << " ";
         }
     }
 
