@@ -25,10 +25,34 @@ void display(struct Node *p){
         cout << p->data<<" ";
         p = p->next;
     }
+    cout << endl;
+}
+void recDecplay(struct Node *p){
+    if(p!=NULL){
+        cout << p->data << " ";
+        recDecplay(p->next);
+    }
+}
+void reverseRecDisplay(struct Node *p){
+    if(p!=0){
+        reverseRecDisplay(p->next);
+        cout << p->data << " ";
+    }
+}
+int lengthOfLinkedlist(struct Node *p){
+    int count = 0;
+    while (p!=0){
+        count++;
+        p = p->next;
+    }
+    return count;
 }
 int main(){
     int A[] = {1, 2, 3, 4, 5, 6, 7};
     create(A, 7);
     display(first);
+    recDecplay(first);
+    reverseRecDisplay(first);
+    cout << lengthOfLinkedlist(first) << endl;
     return 0;
 }
