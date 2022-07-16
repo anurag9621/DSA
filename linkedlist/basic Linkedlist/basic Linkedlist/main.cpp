@@ -86,6 +86,17 @@ int recMaxInLinkedList(Node *p){
     return x>p->data?x:p->data;
  
 }
+Node* searching(Node *p,int k){
+    while(p!=0){
+        if(p->data==k){
+            return (p);
+            break;
+        }
+        p=p->next;
+        
+    }
+    return NULL;
+}
 int main(){
     int A[] = {1, 2, 3, 4, 5, 6, 7};
     create(A, 7);
@@ -99,5 +110,7 @@ int main(){
     cout<<recSumOfLinkedList(first)<<endl;
     maxInLinkedList(first);
     cout<<recMaxInLinkedList(first)<<endl;
+    cout<<searching(first, 6)<<endl;
+    
     return 0;
 }
