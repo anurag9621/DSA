@@ -7,6 +7,7 @@ struct matrix
 };
 
 void set(struct matrix *m, int i, int j, int x)
+
 {
     if (i == j)
     {
