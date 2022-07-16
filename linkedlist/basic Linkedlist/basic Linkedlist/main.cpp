@@ -81,15 +81,10 @@ int recMaxInLinkedList(Node *p){
     if(p==0){
         return INT_MIN;
     }
-    else{
-        x=recMaxInLinkedList(p->next);
-        if(x>p->data){
-            return x;
-        }
-        else{
-            return p->data;
-        }
-    }
+    
+    x=recMaxInLinkedList(p->next);
+    return x>p->data?x:p->data;
+ 
 }
 int main(){
     int A[] = {1, 2, 3, 4, 5, 6, 7};
