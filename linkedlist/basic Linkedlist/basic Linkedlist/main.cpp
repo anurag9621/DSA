@@ -1,14 +1,70 @@
-//
-//  main.cpp
-//  basic Linkedlist
-//
-//  Created by Anurag Pandey on 16/07/22.
-//
+#include<iostream>
+using namespace std;
 
-#include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+struct Node{
+    int data;
+    struct Node *next;
+} * first=NULL;
+void create(int A[], int n){
+    int i;
+    struct Node *t, *last;
+    first = new Node;
+    first->data = A[0];
+    last = first;
+    for (i = 1; i < n;i++){
+        t = new Node;
+        t->data = A[i];
+        t->next=NULL;
+        last->next = t;
+        last = t;
+    }
+}
+void display(struct Node *p){
+    while(p!=NULL){
+        cout << p->data<<" ";
+        p = p->next;
+    }
+    cout << endl;
+}
+void recDecplay(struct Node *p){
+    if(p!=NULL){
+        cout << p->data << " ";
+        recDecplay(p->next);
+    }
+}
+void reverseRecDisplay(struct Node *p){
+    if(p!=0){
+        reverseRecDisplay(p->next);
+        cout << p->data << " ";
+    }
+}
+int lengthOfLinkedlist(struct Node *p){
+    int count = 0;
+    while (p!=0){
+        count++;
+        p = p->next;
+    }
+    return count;
+}
+void sumOfLinkedList(struct Node *p){
+    int sum=0;
+    while(p!=0){
+        sum=sum+p->data;
+        p=p->next;
+    }
+    cout<<sum<<endl;
+    
+}
+int main(){
+    int A[] = {1, 2, 3, 4, 5, 6, 7};
+    create(A, 7);
+    display(first);
+    recDecplay(first);
+    cout<<endl;
+    reverseRecDisplay(first);
+    cout<<endl;
+    cout << lengthOfLinkedlist(first) << endl;
+    sumOfLinkedList(first);
     return 0;
 }
