@@ -55,6 +55,22 @@ void insertAtLast(int x)
         last = t;
     }
 }
+void insertInSortedLinklist(int x)
+{
+    Node *t = new Node;
+    t->data = x;
+    Node *p, *q;
+    p = first;
+    q = NULL;
+    while (p && p->data < x)
+    {
+        
+        q = p;
+        p = p->next;
+    }
+    q->next = t;
+    t->next = p;
+}
 void display(Node *p)
 {
     while (p != NULL)
@@ -71,5 +87,6 @@ int main()
     insert(1, 20);
     insert(1, 30);
     insertAtLast(40);
+    insertInSortedLinklist(35);
     display(first);
 }
