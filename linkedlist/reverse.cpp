@@ -6,7 +6,6 @@ struct Node
     int data;
     Node *next;
 } *first = NULL;
-
 void insert(int pos, int x)
 {
     Node *t, *p;
@@ -33,43 +32,20 @@ void insert(int pos, int x)
         }
     }
 }
-void insertAtLast(int x)
+void reverse()
 {
-    Node *t = new Node;
-    Node *last;
-    last = first;
-    while (last->next != NULL)
-    {
-        last = last->next;
-    }
-    t->data = x;
-    t->next = NULL;
-
-    if (first == NULL)
-    {
-        first = last = t;
-    }
-    else
-    {
-        last->next = t;
-        last = t;
-    }
-}
-void insertInSortedLinklist(int x)
-{
-    Node *t = new Node;
-    t->data = x;
-    Node *p, *q;
+    Node *p, *q, *r;
     p = first;
     q = NULL;
-    while (p && p->data < x)
+    r = NULL;
+    while (p != NULL)
     {
-        
+        r = q;
         q = p;
         p = p->next;
+        q->next = r;
     }
-    q->next = t;
-    t->next = p;
+    first = q;
 }
 void display(Node *p)
 {
@@ -80,13 +56,22 @@ void display(Node *p)
     }
     cout << endl;
 }
-
 int main()
 {
     insert(0, 10);
     insert(1, 20);
     insert(2, 30);
-    insertAtLast(40);
-    insertInSortedLinklist(35);
+    insert(3, 40);
+    insert(4, 50);
+    insert(5, 60);
+    insert(6, 70);
+    insert(7, 80);
+    insert(8, 90);
+    insert(9, 100);
+    insert(10, 110);
+    insert(11, 120);
+
+    display(first);
+    reverse();
     display(first);
 }
