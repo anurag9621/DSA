@@ -47,6 +47,15 @@ void reverse()
     }
     first = q;
 }
+void recReverse(Node *q,Node *p){
+    if(p!=NULL){
+        recReverse(p, p->next);
+        p->next = q;
+    }
+    else{
+        first = q;
+    }
+}
 void display(Node *p)
 {
     while (p != NULL)
@@ -73,5 +82,7 @@ int main()
 
     display(first);
     reverse();
+    display(first);
+    recReverse(NULL, first);
     display(first);
 }
