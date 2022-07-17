@@ -33,20 +33,24 @@ void insert(int pos, int x)
         }
     }
 }
-void insertAtLast(int x){
+void insertAtLast(int x)
+{
     Node *t = new Node;
     Node *last;
     last = first;
-    while(last->next!=NULL){
+    while (last->next != NULL)
+    {
         last = last->next;
     }
     t->data = x;
     t->next = NULL;
 
-    if(first==NULL){
+    if (first == NULL)
+    {
         first = last = t;
     }
-    else{
+    else
+    {
         last->next = t;
         last = t;
     }
@@ -64,7 +68,7 @@ void display(Node *p)
 int main()
 {
     insert(0, 10);
-    insert(1,20);
+    insert(1, 20);
     insert(1, 30);
     insertAtLast(40);
     display(first);
