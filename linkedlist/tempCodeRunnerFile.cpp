@@ -1,1 +1,1 @@
-cout << "its Sorted";
+leaner

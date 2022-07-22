@@ -4,6 +4,7 @@
     "ostream": "cpp",
     "iostream": "cpp",
     "new": "cpp",
-    "chrono": "cpp"
+    "chrono": "cpp",
+    "__node_handle": "cpp"
   }
 }
