@@ -47,6 +47,24 @@ void reverse()
     }
     first = q;
 }
+int getNthFromLast(Node *first, int n)
+{
+    // Your code here
+    Node *c;
+    c = first;
+    for (int i = 0; i < n-1; i++)
+    {
+        c = c->next;
+    }
+    if (c)
+    {
+        return c->data;
+    }
+    else
+    {
+        return -1;
+    }
+}
 void recReverse(Node *q,Node *p){
     if(p!=NULL){
         recReverse(p, p->next);
@@ -80,9 +98,11 @@ int main()
     insert(10, 110);
     insert(11, 120);
 
-    display(first);
-    reverse();
-    display(first);
-    recReverse(NULL, first);
-    display(first);
+    // display(first);
+     reverse();
+    // display(first);
+    // recReverse(NULL, first);
+    // display(first);
+   cout<<  getNthFromLast(first, 3)<<" ";
+
 }
