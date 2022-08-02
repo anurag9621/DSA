@@ -1,9 +1,12 @@
 #include <iostream>
 using namespace std;
-struct Node{
+
+struct Node
+{
     int data;
     Node *next;
-} *first = NULL;
+} *head = NULL;
+
 void insert(int pos, int x)
 {
     Node *t, *p;
@@ -11,12 +14,12 @@ void insert(int pos, int x)
     {
         t = new Node;
         t->data = x;
-        t->next = first;
-        first = t;
+        t->next = head;
+        head = t;
     }
     else if (pos > 0)
     {
-        p = first;
+        p = head;
         for (int i = 0; i < pos - 1 && p; i++)
         {
             p = p->next;
@@ -30,10 +33,39 @@ void insert(int pos, int x)
         }
     }
 }
-void display(Node *p){
-    while(p!=NULL){
-        cout << p->data <<" " ;
+
+Node* reversepair(Node* head,int k)
+{
+    if(head==NULL){
+        return head;
     }
+    int count = 0;
+    Node *curr = head;
+    Node *prev = NULL;
+    Node *nxt = NULL;
+    while(curr != NULL && count < k)
+    {
+        nxt = prev;
+        prev=curr;
+     
+        curr =curr->next;
+        count++;
+        prev->next = nxt;
+    }
+
+    if(nxt != NULL)
+    {
+        head->next=reversepair(nxt->next, k);
+    }
+    return prev;
+}
+void display(Node *p){
+    p = head;
+    while(p!=NULL){
+        cout << p->data << " ";
+        p = p->next;
+    }
+    cout << endl;
 }
 int main(){
     insert(0, 10);
@@ -46,7 +78,7 @@ int main(){
     insert(7, 80);
     insert(8, 90);
     insert(9, 100);
-    insert(10, 110);
-    insert(11, 120);
-    display(first);
+    display(head);
+    reversepair(head, 5);
+    display(head);
 }
