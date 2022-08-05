@@ -1,0 +1,22 @@
+STACK
+
+ADT
+    data                                
+        1. Space for staring element
+        2. top pointer
+    operaters
+        1. push(x)
+        2. pop()
+        3. peek(index)
+        4. stackTop()
+        5. isEmpity()
+        6. ifFull()
+    
+    |----------|
+    |----------|
+    |----------|
+    |----------|            => Stack
+    |----------|
+    |----------|
+    |----------|
+    |__________|
