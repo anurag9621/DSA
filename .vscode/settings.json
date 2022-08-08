@@ -5,6 +5,7 @@
     "iostream": "cpp",
     "new": "cpp",
     "chrono": "cpp",
-    "__node_handle": "cpp"
+    "__node_handle": "cpp",
+    "stack": "cpp"
   }
 }
