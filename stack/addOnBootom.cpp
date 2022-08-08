@@ -1,12 +1,13 @@
 #include <iostream>
 #include <stack>
 using namespace std;
-int sh(stack<int> &s, int p)
+void sh(stack<int> &s, int p)
 {
     
     if (s.empty())
     {
         s.push(p);
+        return ;
     }
     int ch = s.top();
     s.pop();
