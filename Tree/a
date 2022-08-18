@@ -1,0 +1,15 @@
+Number of binary tree in given node 
+catalan formula:-   ^2nCn/n+1
+
+Max height of binary tree is 2^n-1
+height starts with 0,1,2....
+depth start with 1,2,3...
+
+lable node of number of binary tree is 
+    (^2nCn/n+1)*n!
+
+
+            HEIGHT Vs NODE 
+    min node reguired to form a certain binary tree is:- h+1
+    max node contain in certain binary tree in given height:- ((2^(h+1))-1)
+    
