@@ -10,6 +10,15 @@ lable node of number of binary tree is
 
 
             HEIGHT Vs NODE 
-    min node reguired to form a certain binary tree is:- h+1
-    max node contain in certain binary tree in given height:- ((2^(h+1))-1)
-    
+            if Height is given
+    min node reguired to form a certain binary tree is:-n= h+1
+    max node contain in certain binary tree in given height:-n= ((2^(h+1))-1)
+            if Node is given
+    min:-h= log(n+1)-1
+    max:-h= n-1
+
+
+    HEIGHT OF BINARY TREE
+    log(n+1)-1<=h<=n-1
+    NUMBER OF NODES IN BINARY TREE
+    h+1<=n<=(2^(h+1))-1
