@@ -16,9 +16,12 @@ lable node of number of binary tree is
             if Node is given
     min:-h= log(n+1)-1
     max:-h= n-1
-
-
     HEIGHT OF BINARY TREE
     log(n+1)-1<=h<=n-1
     NUMBER OF NODES IN BINARY TREE
     h+1<=n<=(2^(h+1))-1
+
+
+    n-arry tree
+    if a tree deg is n or less then n it is n-arry tree;
+    
