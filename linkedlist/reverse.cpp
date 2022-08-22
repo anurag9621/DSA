@@ -40,12 +40,12 @@ void reverse()
     r = NULL;
     while (p != NULL)
     {
-        r = q;
-        q = p;
+        q = r;
+        r = p;
         p = p->next;
-        q->next = r;
+        r->next = q;
     }
-    first = q;
+    first = r;
 }
 int getNthFromLast(Node *first, int n)
 {
