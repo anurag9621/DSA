@@ -6,6 +6,7 @@
     "new": "cpp",
     "chrono": "cpp",
     "__node_handle": "cpp",
-    "stack": "cpp"
+    "stack": "cpp",
+    "queue": "cpp"
   }
 }

@@ -26,6 +26,14 @@ void inOrder(Node){
     cout << Node->data;
     inOrder(Node->right);
 }
+void postOrder(Node){
+    if(Node ==NULL){
+        return;
+    }
+    postOrder(Node->left);
+    postOrder(Node->right);
+    cout << Node->data;
+}
 int main(){
     struct Node *root = new Node(2);
     return 0;
